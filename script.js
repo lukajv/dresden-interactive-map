@@ -47,6 +47,13 @@ function updateSidebar(loc) {
     const listEl = document.getElementById('side-sources-list');
     listEl.innerHTML = ""; // Clear old sources
 
+    const sourcesContainer = document.getElementById('sources-container');
+    if (loc.sources && loc.sources.length > 0) {
+        sourcesContainer.style.display = 'block';
+    } else {
+        sourcesContainer.style.display = 'none';
+    }
+
     if (loc.sources && loc.sources.length > 0) {
         loc.sources.forEach(source => {
             const li = document.createElement('li');
@@ -67,3 +74,7 @@ locations.forEach(loc => {
         updateSidebar(loc); // Pass the whole object
     });
 });
+
+// focus map
+const bounds = L.latLngBounds(locations.map(loc => loc.coords));
+map.fitBounds(bounds, { padding: [50, 50] });
