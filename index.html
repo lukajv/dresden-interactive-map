@@ -5,10 +5,28 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
           crossorigin=""/>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<div id="map"></div>
+<div class="main-wrapper">
+    <div id="map"></div>
+    <div id="sidebar">
+        <div class="sidebar-top-content">
+            <img id="side-image" src="" alt="" style="width:100%; display:none; margin-bottom:15px; border-radius:4px;">
+            <h2 id="side-title">Select a location</h2>
+            <p id="side-date"><i>Date will appear here</i></p>
+            <div id="side-content">
+                Click a marker on the map to see the historical details of Dresden.
+            </div>
+        </div>
+
+        <div id="sources-container" style="display: none;">
+            <span style="font-size: 0.8em; font-weight: bold; color: #666;">Sources:</span>
+            <ul id="side-sources-list" style="font-size: 0.8em; padding-left: 20px;">
+            </ul>
+        </div>
+    </div>
+</div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="

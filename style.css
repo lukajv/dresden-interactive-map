@@ -1,4 +1,51 @@
-#map {
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrapper {
+    display: flex;
     height: 100vh;
+    width: 100vw;
+}
+
+#map {
+    flex: 3;
+    height: 100%; /* Now refers to 100% of .main-wrapper */
+}
+
+#sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    background: #f4f4f4;
+    border-left: 2px solid #ccc;
+    box-sizing: border-box; /* This is vital */
+    overflow: hidden; /* Prevents the whole sidebar from scrolling */
+}
+
+.sidebar-top-content {
+    flex-grow: 1;
+    overflow-y: auto; /* Only the text/image area should scroll */
+    padding-right: 10px; /* Space for the scrollbar */
+}
+
+#side-image {
     width: 100%;
+    max-height: 250px; /* Limits the vertical space it can take */
+    object-fit: cover; /* Crops the image slightly to fill the area instead of stretching */
+    display: none;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#sources-container {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    background: #f4f4f4; /* Match sidebar background */
+    flex-shrink: 0; /* Prevents the sources from being squished */
 }

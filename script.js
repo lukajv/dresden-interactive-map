@@ -7,7 +7,63 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Add a marker for your research
-const dresdenMarker = L.marker([51.0504, 13.7373]).addTo(map);
 
-// Add a popup with your research details
-dresdenMarker.bindPopup("<b>The Frauenkirche</b><br>Destroyed in the 1945 firestorm, now a symbol of peace.").openPopup();
+const locations = [
+    {
+        name: "Altmarkt",
+        coords: [51.0491019, 13.7352104],
+        date: "Feb, 1945",
+        info: "During the bombing raids, the historic Altmarkt (Old Market) was completely destroyed. " +
+            "Reconstruction with a modified square layout began in 1953.",
+        imageUrl: "images/Altmarkt.jpg",
+        sources: [
+            { label: "City of Dresden Portal", url: "https://www.dresden.de/de/tourismus/sehen/sehenswuerdigkeiten/altstadt/altmarkt.php#?searchkey=Altmarkt"}
+            ]
+    },
+    {
+        name: "Frauenkirche",
+        coords: [51.0519, 13.7415],
+        date: "Feb 15, 1945",
+        info: "Survived the bombs but collapsed from heat..."
+    }
+];
+
+function updateSidebar(loc) {
+    // 1. Update basic text
+    document.getElementById('side-title').innerText = loc.name;
+    document.getElementById('side-date').innerHTML = `<i>${loc.date}</i>`;
+    document.getElementById('side-content').innerText = loc.info;
+
+    // 2. Handle the Image
+    const imgElement = document.getElementById('side-image');
+    if (loc.imageUrl) {
+        imgElement.src = loc.imageUrl;
+        imgElement.style.display = "block";
+    } else {
+        imgElement.style.display = "none";
+    }
+
+    // 3. Handle multiple Sources
+    const listEl = document.getElementById('side-sources-list');
+    listEl.innerHTML = ""; // Clear old sources
+
+    if (loc.sources && loc.sources.length > 0) {
+        loc.sources.forEach(source => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = source.url;
+            a.target = "_blank";
+            a.innerText = source.label;
+            li.appendChild(a);
+            listEl.appendChild(li);
+        });
+    }
+}
+
+// Loop through locations and add markers
+locations.forEach(loc => {
+    const marker = L.marker(loc.coords).addTo(map);
+    marker.on('click', () => {
+        updateSidebar(loc); // Pass the whole object
+    });
+});
