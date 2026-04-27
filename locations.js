@@ -8,7 +8,11 @@ const locations = [
         imageUrl: "images/Altmarkt.jpg",
         sources: [
             { label: "City of Dresden Portal", url: "https://www.dresden.de/de/tourismus/sehen/sehenswuerdigkeiten/altstadt/altmarkt.php#?searchkey=Altmarkt"}
-        ]
+        ],
+        shape: {
+            type: "polygon",
+            coords: [[51.049095, 13.738715], [51.049986, 13.739040], [51.050219, 13.737110], [51.049152, 13.737016]]
+        }
     },
     {
         name: "Frauenkirche",

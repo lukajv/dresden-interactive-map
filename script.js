@@ -45,12 +45,41 @@ function updateSidebar(loc) {
     }
 }
 
-// Loop through locations and add markers
+// Loop through locations and add markers or shapes
 locations.forEach(loc => {
-    const marker = L.marker(loc.coords).addTo(map);
-    marker.on('click', () => {
-        updateSidebar(loc); // Pass the whole object
-    });
+    // If location has a shape, add shape instead of marker
+    if (loc.shape) {
+        if (loc.shape.type === 'circle') {
+            const circle = L.circle(loc.coords, {
+                color: 'blue',
+                fillColor: '#30f',
+                fillOpacity: 0.2,
+                radius: loc.shape.radius
+            }).addTo(map);
+
+            circle.on('click', () => {
+                updateSidebar(loc);
+            });
+        }
+        else if (loc.shape.type === 'polygon') {
+            const polygon = L.polygon(loc.shape.coords, {
+                color: 'red',
+                fillColor: '#ff7800',
+                fillOpacity: 0.2
+            }).addTo(map);
+
+            polygon.on('click', () => {
+                updateSidebar(loc);
+            });
+        }
+    }
+    else {
+        // No shape defined, add marker as fallback
+        const marker = L.marker(loc.coords).addTo(map);
+        marker.on('click', () => {
+            updateSidebar(loc);
+        });
+    }
 });
 
 // focus map
