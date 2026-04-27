@@ -6,28 +6,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
-// Add a marker for your research
-
-const locations = [
-    {
-        name: "Altmarkt",
-        coords: [51.0491019, 13.7352104],
-        date: "Feb, 1945",
-        info: "During the bombing raids, the historic Altmarkt (Old Market) was completely destroyed. " +
-            "Reconstruction with a modified square layout began in 1953.",
-        imageUrl: "images/Altmarkt.jpg",
-        sources: [
-            { label: "City of Dresden Portal", url: "https://www.dresden.de/de/tourismus/sehen/sehenswuerdigkeiten/altstadt/altmarkt.php#?searchkey=Altmarkt"}
-            ]
-    },
-    {
-        name: "Frauenkirche",
-        coords: [51.0519, 13.7415],
-        date: "Feb 15, 1945",
-        info: "Survived the bombs but collapsed from heat..."
-    }
-];
-
 function updateSidebar(loc) {
     // 1. Update basic text
     document.getElementById('side-title').innerText = loc.name;
@@ -77,4 +55,8 @@ locations.forEach(loc => {
 
 // focus map
 const bounds = L.latLngBounds(locations.map(loc => loc.coords));
-map.fitBounds(bounds, { padding: [50, 50] });
+map.fitBounds(bounds, {
+    padding: [50, 50],
+    maxZoom: 15,
+    duration: 0.5
+});
