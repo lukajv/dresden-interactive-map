@@ -8,7 +8,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Add Historic Tiles
 L.tileLayer.wms('https://wms.kartenforum.slub-dresden.de/map/stadtplan_dresden', {
-    layers: 'stadtplan_dresden',  // Adjust layer name based on GetCapabilities response
+    layers: 'stadtplan_dresden',
     format: 'image/png',
     transparent: true,
     attribution: '© SLUB Dresden'
