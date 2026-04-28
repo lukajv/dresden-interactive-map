@@ -6,6 +6,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
+// Add Historic Tiles
+L.tileLayer.wms('https://wms.kartenforum.slub-dresden.de/map/stadtplan_dresden', {
+    layers: 'stadtplan_dresden',  // Adjust layer name based on GetCapabilities response
+    format: 'image/png',
+    transparent: true,
+    attribution: '© SLUB Dresden'
+}).addTo(map);
+
 function updateSidebar(loc) {
     // 1. Update basic text
     document.getElementById('side-title').innerText = loc.name;
