@@ -48,13 +48,20 @@ const locations = [
         name: "Schlossplatz, Cathedral of the Holy Trinity",
         coords: [51.053555, 13.738012],
         date: "7-8 May 1945",
-        info: "",
+        info: "After the citizens had been expecting the city to fall for weeks, it was eventually captured" +
+            " by the Red Army's 1st Ukrainian Front. On this day, a mine-clearing unit marked this building as cleared " +
+            "of mines in Cyrillic writing and signed it. Four of these inscriptions remain at various places around the exterior" +
+            " of the cathedral.",
         imageUrl: "images/Schlossplatz.jpg",
         sources: [
             {
-                label: "Schlossplatz",
+                label: "City of Dresden Portal",
+                url: "https://www.dresden.de/de/tourismus/sehen/sehenswuerdigkeiten/altstadt/kathedrale.php"
+            },
+            {
+                label: "GRAVUREN. Mahndepots in Dresden",
+                url: "https://mahndepots-dresden.de/orte/ort57/"
             }
         ]
-
     }
 ];
