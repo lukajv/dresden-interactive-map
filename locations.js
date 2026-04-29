@@ -18,7 +18,7 @@ const locations = [
         name: "Frauenkirche",
         coords: [51.0519, 13.7415],
         date: "13 Feb 1945",
-        info: "\"Church of Our Lady\" was constructed between 1726 and 1743 by George Bähr. " +
+        info: "\"Church of Our Lady\" was constructed between 1726 and 1743 by George Bahr. " +
             "After the air raid, the building stood for one day. It toppled finally since the sandstone " +
             "foundation could not withstand the high temperatures. After Germany's reunification, it was rebuilt " +
             "in the 1990s.",
