@@ -1,3 +1,28 @@
+/*
+    ----TEMPLATE----
+
+        name: "",
+        coords: [],
+        date: "",
+        info: "",
+        imageUrl: "",
+        sources: [
+            {
+                label: "",
+                url: ""
+            }
+        ]
+        shape: {
+            type: "",
+        }
+ */
+
+
+
+
+
+
+
 const locations = [
     {
         name: "Altmarkt",
@@ -18,7 +43,7 @@ const locations = [
         name: "Frauenkirche",
         coords: [51.0519, 13.7415],
         date: "13 Feb 1945",
-        info: "\"Church of Our Lady\" was constructed between 1726 and 1743 by George Bahr. " +
+        info: "\"Church of Our Lady\" was constructed between 1726 and 1743 by George Bähr. " +
             "After the air raid, the building stood for one day. It toppled finally since the sandstone " +
             "foundation could not withstand the high temperatures. After Germany's reunification, it was rebuilt " +
             "in the 1990s.",
@@ -86,5 +111,24 @@ const locations = [
             type: "circle",
             radius: 50
         }
+    },
+    {
+        name: "Weiße Gasse 5/7",
+        coords: [51.049482, 13.740446],
+        date: "1956",
+        info: "The Weiße Gasse is a pedestrian zone which was part of the reconstruction after the war, which" +
+            " began in 1953. At the end of the year in 1956, buildings Weiße Gasse 5 and 7 were completed. Upon completion," +
+            " an inscription could be found on the keystone. \"EVERY STONE OF THE NEW CITY CARRIES THE LETTERS INVISIBLY: PEACE\"",
+        imageUrl: "images/WeiszeGasse.jpg",
+        sources: [
+            {
+                label: "GRAVUREN. Mahndepots in Dresden",
+                url: "https://mahndepots-dresden.de/orte/ort70/"
+            },
+            {
+                label: "Gastro Guide",
+                url: "https://www.gastroguide.de/restaurant/182524/restaurant-foerster-s/dresden/"
+            }
+        ]
     }
 ];
