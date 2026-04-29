@@ -2,9 +2,11 @@
 const map = L.map('map').setView([51.0504, 13.7373], 13);
 
 // Add OpenStreetMap tiles
+/*
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
 }).addTo(map);
+ */
 
 // Add Historic Tiles
 L.tileLayer.wms('https://wms.kartenforum.slub-dresden.de/map/stadtplan_dresden', {

@@ -1,7 +1,7 @@
 const locations = [
     {
         name: "Altmarkt",
-        coords: [51.0491019, 13.7352104],
+        //coords: [51.0491019, 13.7352104],
         date: "Feb 1945",
         info: "During the bombing raids, the historic Altmarkt (Old Market) was completely destroyed. " +
             "Reconstruction with a modified square layout began in 1953.",
@@ -63,5 +63,28 @@ const locations = [
                 url: "https://mahndepots-dresden.de/orte/ort57/"
             }
         ]
+    },
+    {
+        name: "Sternplatz",
+        coords: [51.046882, 13.725907],
+        date: "13 Feb 1945",
+        info: "Planning documents at the city's \"Emergency Comittee to Combat Emegencies\" in 1943" +
+            " identified Sternplatz as one of the 100+ sites to bury dead bodies from air raids. On the" +
+            " night of the bombing, the buildings surrounding Sternplatz were leveled by fire and eventually destroyed.",
+        imageUrl: "images/Sternplatz.jpg",
+        sources: [
+            {
+                label: "City of Dresden Portal",
+                url: "https://www.dresden.de/de/stadtraum/umwelt/gruenes-dresden/gruenanlagen-parks/sternplatz.php"
+            },
+            {
+                label: "GRAVUREN. Mahndepots in Dresden",
+                url: "https://mahndepots-dresden.de/orte/ort29/"
+            }
+        ],
+        shape: {
+            type: "circle",
+            radius: 50
+        }
     }
 ];
