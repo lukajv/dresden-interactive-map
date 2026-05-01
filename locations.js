@@ -110,7 +110,7 @@ const locations = [{
     coords: [51.049635, 13.737939],
     date: "19 Jan 2024",
     info: "On this date, a new information steele was erected in the square "
-        + "as a replacement for the old one which was destroyed "
+        + "as a replacement for the old one which was damaged "
         + "in 2023. It speaks about the 6,865 people who were burned in the"
         + " square due to the overloaded cemetaries, and how they were"
         + " buried together at Heidefriedhof cemetary in a mass grave.\n\n"
