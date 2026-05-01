@@ -116,6 +116,7 @@ const locations = [{
         + " buried together at Heidefriedhof cemetary in a mass grave.\n\n"
         + "The full information steele can be read at the provided source"
         + " link.",
+    imageUrl: "images/MetalTrail.jpg",
     sources: [{
         label: "VisitDresden",
         url: "https://www.visit-dresden-elbland.de/en/poi/metal-trail-of-remembrance-on-the-altmarkt-in-dresden"
