@@ -159,7 +159,7 @@ const locations = [{
             + "Now this building is being renewed. They plan to combine"
             + " \"History and Modernity\" to preserve the current layout and"
             + " structure while modernizing the inside.",
-        imageUrl: "Konigsufer.jpg",
+        imageUrl: "images/Konigsufer.jpg",
         sources: [
             {
                 label: "GRAVUREN. Mahndepots in Dresden",
@@ -184,7 +184,7 @@ const locations = [{
             + "Opened in 1901, the station initially replaced the previous"
             + " Leipziger and Schlesicher Bahnhof stations, consolidating"
             + " the rail traffic on the northern side.",
-        imageUrl: "NeustadtBahnhof.jpeg",
+        imageUrl: "images/NeustadtBahnhof.jpeg",
         sources: [
             {
                 label: "Mapy",
