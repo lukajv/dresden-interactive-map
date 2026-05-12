@@ -1,6 +1,6 @@
 /*
     ----TEMPLATE----
-
+{
         name: "",
         coords: [],
         date: "",
@@ -15,6 +15,7 @@
         shape: {
             type: "",
         }
+}
  */
 
 
@@ -121,4 +122,98 @@ const locations = [{
         label: "VisitDresden",
         url: "https://www.visit-dresden-elbland.de/en/poi/metal-trail-of-remembrance-on-the-altmarkt-in-dresden"
     }]
-}];
+},
+    {
+        name: "Heinrichstraße 2",
+        coords: [51.059285, 13.742369],
+        date: "13 Feb 1945",
+        info: "On this evening, under the air-raids, wardens employed under"
+            + " the firm Koch & Sterzel were on duty at the Mickten Works."
+            + "Since the first air raid did not damage the works, the"
+            + " wardens formed a fire brigade to help others. While on the"
+            + " way to the Ministry of the Interior, the sirens again"
+            + " sounded for the second wave. They had to head back.\n\n"
+            + "Again the works remained undamaged, and they again went to"
+            + " help. As they were crossing Heinrichstraße, they were asked"
+            + " to help. After finding a fire hydrant, and several hours,"
+            + " they succeeded and were the only fire fighters in Hauptstraße."
+            + "\n\n Since fuel for the pump used to extinguish the fire was"
+            + " depleted, they returned to work the next morning.",
+        //imageUrl: "",
+        sources: [
+            {
+                label: "GRAVUREN. Mahndepots in Dresden",
+                url: "https://mahndepots-dresden.de/orte/ort35/"
+            }
+        ]
+    },
+    {
+        name: "Königsufer, Ministry of the Interior",
+        coords: [51.055780, 13.744640],
+        date: "21 July 1944",
+        info: "One day after the failed assasination of Hitler, significant"
+            + " numbers of all units of the Dresden garrison were forced"
+            + " into a show of dedication for the Führer. The Dresdeners"
+            + " were receptive, and NSDAP, the Hitler Youth, and other"
+            + " groups marched in demonstration.\n\n"
+            + "Now this building is being renewed. They plan to combine"
+            + " \"History and Modernity\" to preserve the current layout and"
+            + " structure while modernizing the inside.",
+        imageUrl: "Konigsufer.jpg",
+        sources: [
+            {
+                label: "GRAVUREN. Mahndepots in Dresden",
+                url: "https://mahndepots-dresden.de/orte/ort14/"
+            },
+            {
+                label: "City of Dresden Portal",
+                url: "https://www.dresden.de/de/stadtraum/zentrale-projekte/koenigsufer-neustaedter-markt.php"
+            }
+        ]
+    },
+    {
+        name: "Neustadter Bahnhof",
+        coords: [51.065340, 13.740956],
+        date: "Oct 1944",
+        info: "During this time, on average, 19,600 soldiers and officers"
+            + " would pass through this railway station daily. The engines"
+            + " of around half the trains were changed at the station, and"
+            + " the other half recieved food and medical care. Wehrmacht"
+            + " care stations were established at both of Dresden's large"
+            + " railway stations.\n\n"
+            + "Opened in 1901, the station initially replaced the previous"
+            + " Leipziger and Schlesicher Bahnhof stations, consolidating"
+            + " the rail traffic on the northern side.",
+        imageUrl: "NeustadtBahnhof.jpeg",
+        sources: [
+            {
+                label: "Mapy",
+                url: "https://mapy.com/en/turisticka?source=osm&id=1067625402&x=13.7411284&y=51.0655621&z=18"
+            },
+            {
+                label: "GRAVUREN. Mahndepots in Dresden",
+                url: "https://mahndepots-dresden.de/orte/ort2/"
+            }
+        ]
+    },
+    {
+        name: "Tieckstraße 14",
+        coords: [51.061897, 13.753286],
+        date: "13 Feb 1945",
+        info: "Primary School No. 49, in Tieckstraße 14, served more than"
+            + " 1,000 piles of straw as beds for refugees. On the evening of"
+            + " the 13th, 750 new refugees had arrived. They were forced to"
+            + " evacuate a burning building to the vocational school across"
+            + " the way. On the morning of the 14th, military vehicles"
+            + " arrived and evacuted all the civilians."
+            + "\n\nThe school was completely gutted by fire and left"
+            + " destroyed.",
+        //imageUrl: "",
+        sources: [
+            {
+                label: "GRAVUREN. Mahndepots in Dresden",
+                url: "https://mahndepots-dresden.de/orte/ort25/"
+            }
+        ]
+    }
+    ];
